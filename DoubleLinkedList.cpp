@@ -63,5 +63,9 @@ public:
         {
             current = current->next;
         }
+
+        // Step 9: insert between current and current->next
+        newNode->next = current->next;
+        newNode->previous = current;
     }
 };
