@@ -52,5 +52,9 @@ public:
 
         // Step 6: newNode.previous = NULL
         newNode->previous = NULL;
+
+        // Step 7: START =newNode
+        START = newNode;
+        return;
     }
 };
