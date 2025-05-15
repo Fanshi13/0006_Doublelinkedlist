@@ -5,9 +5,9 @@ using namespace std;
 class Node
 {
 public:
-    int nodeMhs;
-    node *next;
-    node *previous;
+    int noMhs;
+    Node *next;
+    Node *previous;
 };
 
 class DoubleLinkedList
@@ -16,28 +16,31 @@ private:
     Node *START;
 
 public:
-    DoubleLinkedList()(
-        START = NULL;)
+    DoubleLinkedList()
+    {
+        START = NULL;
+    }
+    void addNode()
+    {
+        int nim;
+        string nim;
+        cout << "\nEnter the roll number of the student";
+        cin >> nim;
 
-        void addNode()(
-            int nim;
-            string nim;
-            cout << "\nEnter the roll number of the student";
-            cin >> nim;
+        // Step 1: Allocate memory for new node
+        Node *newNode = new Node();
 
-            // Step 1: Allocate memory for new node
-            Node *newNode = new Node();
+        // Step 2: Assign value to the data fields
+        newNode->noMhs = nim;
 
-            // Step 2: Assign value to the data fields
-            newNode->noMhs = nim;
-
-            // Step 3: Insert at beginning if list is empty or nim is smallest
-            if (START == NULL || nim <= START->noMhs) {
-                if (START != NULL && nim == START->noMhs)
-                {
-                    cout << "\nDuplicate number not allowed" << return;
-                }
+        // Step 3: Insert at beginning if list is empty or nim is smallest
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if (START != NULL && nim == START->noMhs)
+            {
+                cout << "\nDuplicate number not allowed" << endl;
+                return;
             }
-
-        )
-}
+        }
+    }
+};
