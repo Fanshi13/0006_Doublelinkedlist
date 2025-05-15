@@ -56,5 +56,12 @@ public:
         // Step 7: START =newNode
         START = newNode;
         return;
+
+        // Step 8: locate pottion for insertion
+        Node *current = START;
+        while (current->next != NULL && current->next->noMhs < nim)
+        {
+            current = current->next;
+        }
     }
 };
