@@ -65,11 +65,20 @@ public:
         }
 
         // Step 9: insert between current and current->next
-        newNode->next = current->next;
-        newNode->previous = current;
+        newNode->next = current->next; // Step 9a
+        newNode->previous = current;   // Step 9b
 
-        // Step 10: insert last node
-        if (current->next != NULL)
-            current->next->previous = newNode;
+        // Insert last node
+        if (current->next != NULL)             // Step 9c
+            current->next->previous = newNode; // Step 9d
+    }
+
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
     }
 };
