@@ -67,5 +67,9 @@ public:
         // Step 9: insert between current and current->next
         newNode->next = current->next;
         newNode->previous = current;
+
+        // Step 10: insert last node
+        if (current->next != NULL)
+            current->next->previous = newNode;
     }
 };
